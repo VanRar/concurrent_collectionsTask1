@@ -6,9 +6,7 @@ public class Main {
         User user = new User();
         Support support = new Support();
 
-
         ConcurrentLinkedQueue<String> requestList = new ConcurrentLinkedQueue<>();
-
 
         Thread userRequest = new Thread(() -> user.request(60, requestList));
         userRequest.start();
